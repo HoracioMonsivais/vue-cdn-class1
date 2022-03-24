@@ -9,10 +9,14 @@
     <div id="app">
         <!-- poner directamente {{ }} en img src= no va a funcionar en vue, en react o otros si funciona dierectamente asi. -->
         <!-- tenemos que agregar una sintaxis de vue, v-bind:src= ya nos va a permitir ponerlo sin llaves-->
-        <img v-bind:src="foto" alt="foto_perfil">
+        <!-- se le agrega : (dos puntos) antes de class"" por si tenemos clases variables-->
+        <!-- las dobles llaves son para meterle syntaxis e indicar que es una variable, de lo contrario te va a pintar lo que tenga adentro {hola} se mostrara hola fijamente-->
+        <img v-bind:src="foto" alt="foto_perfil" :class="genero">
         <h1>{{nombre}} {{apellido}} </h1>
         <h3>Email: {{email}} </h3>
-        <button>Tener un usuario random</button>
+        <!-- v-on:click="" la sintaxis es muy simiar al on:click de html-->
+        <!-- asi es la forma en que vamos a mandar llamar una función de VUE-->
+        <button v-on:click="cambiarUsuario()" :class="genero">Tener un usuario random</button>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>

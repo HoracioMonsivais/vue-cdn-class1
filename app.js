@@ -16,7 +16,7 @@ const app = Vue.createApp ({
         async cambiarUsuario() {
             const res = await fetch('https://randomuser.me/api');
             // {} una llave indica que adentro va un objeto
-            const { results } = await res.json()
+            const { results } = await res.json();
 
             // ya no necesitamos estar imprimiendo results  console.log(results);
 

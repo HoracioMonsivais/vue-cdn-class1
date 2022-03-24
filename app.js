@@ -1,8 +1,11 @@
 const app = Vue.createApp ({
     data() {
         return {
-            message: 'Hello',
-            name: 'Explorers'
+            nombre: 'Rodrigo',
+            apellido: 'Martinez',
+            email: 'rmartinez@inovaccion.mx',
+            genero: 'male',
+            foto: 'https://randomuser.me/api/portraits/men/75.jpg'
         }
     }
 })

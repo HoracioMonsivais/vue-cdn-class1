@@ -7,7 +7,12 @@
 <body>
 
     <div id="app">
-        <h1>{{ message }} {{name}} </h1>
+        <!-- poner directamente {{ }} en img src= no va a funcionar en vue, en react o otros si funciona dierectamente asi. -->
+        <!-- tenemos que agregar una sintaxis de vue, v-bind:src= ya nos va a permitir ponerlo sin llaves-->
+        <img v-bind:src="foto" alt="foto_perfil">
+        <h1>{{nombre}} {{apellido}} </h1>
+        <h3>Email: {{email}} </h3>
+        <button>Tener un usuario random</button>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>
